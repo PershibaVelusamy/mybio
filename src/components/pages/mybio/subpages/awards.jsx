@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import styles from '../scss/awards.module.scss'
 import { getAwards } from '../../../../constants/mainApiService'
 
-export const Awards = () => {
-    const [awardData, setAwardData] = useState({ AwardList: [],limitList:[] })
-
+export const Awards = (props) => {
+    const [awardData, setAwardData] = useState({ AwardList: [], limitList: [] })
+    const { bioWrapData, openViewAll } = props
     useEffect(() => {
         getAwards().then((response) => {
             let miniversion = []
@@ -23,11 +23,11 @@ export const Awards = () => {
         <div className={styles.main_wrapper}>
             <div className={styles.heading_Wrapper}>
                 <span className={styles.award_text}> My awards & certificates </span>
-                <span className={styles.view_all}>View all</span>
+               {awardData.AwardList.length>0&& <span onClick={()=>openViewAll(true,awardData.AwardList)}className={styles.view_all}>View all</span>}
             </div>
 
             <div className={styles.award_wrapper}>
-                {awardData?.limitList?.map((awards,index) => {
+                {awardData?.limitList?.map((awards, index) => {
                     return <>
                         <img className={styles.award_img} key={index} src={awards?.awardIconURL} alt={awards?.awardTitle} />
                     </>

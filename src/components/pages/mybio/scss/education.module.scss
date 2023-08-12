@@ -1,0 +1,114 @@
+@import "../../../../styles/fonts.scss";
+.main_wrapper{
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 29px;
+}
+
+.education_text{
+    margin-left: 20px;
+    font-family: "Avenir Next Bold";
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+.education_wrapper{
+  
+    margin: 18px 11px 20px 20px;
+    // border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.education_single_wrapper{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.education_single_wrapper:nth-last-child(-n+1) {
+    border-bottom:none;
+  }
+  
+.education_title{
+    font-family: "Avenir Next Bold";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.titile_display{
+    display: flex;
+    margin-top: 29px;
+}
+
+.sheildImg{
+    margin-left: 6px;
+    // margin-top: 6px;
+    text-align: left;
+}
+
+.intitute_Wrapper{
+    font-family: "Avenir Next Regular" !important;
+    color: rgba(28, 9, 9, 0.6);
+    text-transform: capitalize;
+        font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+ display: flex;   
+ margin-top: 2px;
+}
+
+.institute{
+    max-width: 60%;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+.city{
+    margin-left: 2px;
+    border-left: 1.5px solid rgba(28, 9, 9, 0.3);
+  
+    padding-left: 2px;
+    max-width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+.verifiedimg{
+    margin-left: 4px;
+}
+
+.date{
+    font-family: "Avenir Next Regular" !important;
+font-size: 12px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 24px;
+// margin-left: 2px;
+}
+
+.companyDate{
+    font-family: "Avenir Next Regular" !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+// .companyDate:nth-last-child(-n+1) {
+//     margin-bottom: 59px;
+//   }

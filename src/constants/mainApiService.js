@@ -59,4 +59,23 @@ export const getAwards = async () => {
 
 
 }
+export const getEducation = async () => {
+    try {
+        return postApi(`/noSessionViewMyBioEducationDetails?userCode=${useCode1}`, {})
+            .then((response) => {
+                console.log(response, "response")
+                if(response.status===200){
+                    return response.data
+                }
+           
+            }).catch((error) => {
+                return error
+            })
+    } catch (error) {
+        return error
+    }
+
+
+
+}
 
