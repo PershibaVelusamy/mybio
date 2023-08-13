@@ -1,19 +1,25 @@
-import React from 'react'
-import styles from '../scss/aeardsandcertificate.module.scss'
+import React, { useEffect } from 'react'
+import styles from '../scss/awardsandcertificate.module.scss'
 import { verified, searchEmpty } from '../../../../assets/images/index'
 import { Empty } from '../../../shared/index';
 export const Awardsandcertificate = (props) => {
-    const { data } = props;
+    const { data, hideSearch } = props;
     console.log(data, "data")
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+    }, [])
+
+
     return (
         <>
 
-            {data.awardsandcertificate.length !== 0 ?
+            {data.SearchAwardList.length !== 0 ?
 
                 <div className={styles.awardandcertificate_wrapper}>
-                    {data.awardsandcertificate.map((award) => {
+                    {data.SearchAwardList.map((award) => {
                         return <>
-                            <div className={styles.awardsList}>
+                            <div onClick={() => hideSearch(award)} className={styles.awardsList}>
                                 <img className={styles.award_img} src={award.awardIconURL} alt='awards' />
                                 <div className={styles.awarditle_Wrapper}>
                                     <span className={styles.awardTitle}>
@@ -38,7 +44,7 @@ export const Awardsandcertificate = (props) => {
 
                 </div> :
                 <Empty emptyImg={searchEmpty} />
-        }
+            }
         </>
 
     )

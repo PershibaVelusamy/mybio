@@ -4,17 +4,18 @@ import { getEducation } from '../../../../constants/mainApiService'
 import {Education} from './education'
 import {Company} from './company'
 export const EducationandCompany = () => {
-    const [educationData, seteducationData] = useState({ educationList: [], companyList: [] })
+    const [educationData, seteducationData] = useState({ educationList: [], companyList: [],isEducationLoading:true })
 
     useEffect(() => {
-        getEducation().then((response) => {
-            console.log(response.result[0], "education")
-            seteducationData({ ...educationData, educationList: response.result[0].educationDetails, companyList: response.result[0].companyDetails })
-        })
+        if(educationData.isEducationLoading){
+            getEducation().then((response) => {
+                seteducationData({ ...educationData, educationList: response.result[0].educationDetails, companyList: response.result[0].companyDetails,isEducationLoading:false })
+            })
+        }
+     
 
     }, [])
 
-    console.log(educationData)
     const { educationList,companyList } = educationData;
     return (
         // <div className={styles.main_wrapper}>

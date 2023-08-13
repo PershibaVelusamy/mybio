@@ -1,0 +1,140 @@
+@import "../../../../styles/fonts.scss";
+
+.award_Wrapper{
+    width: 100%;
+}
+
+.awardTitle{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 80%;
+    white-space: pre-wrap;
+   
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    
+}
+
+.award_img_icon{
+    width: 150px;
+    height: 150px;
+    margin-left: 107px;
+
+}
+
+.awardDetails_wrapper{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.displaylabel{
+    display: flex;
+    margin-bottom: 10px;
+}
+.label_wrapper{
+    font-family: "Avenir Next Bold";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 5px;
+    width: 25%;
+    
+    color: rgba(0, 0, 0, 1);
+    
+}
+
+.collan{
+  //  margin-left: 10px;
+}
+.descriptionText{
+    margin-left: 10px;
+font-family: "Avenir Next Regular";
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing:  0.02em;
+width: 65%;
+white-space: pre-wrap;
+text-align: left;
+color: rgba(49, 48, 48, 0.9);
+
+
+
+}
+
+.certificate_wrapper{
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    width: 90%;
+    height: 184px;
+    margin-left: 20px;
+    border-radius: 4px;
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.16%, rgba(0, 0, 0, 0.17) 61.41%), linear-gradient(0deg, #DFDFDF, #DFDFDF);
+    border: 1px solid rgb(223, 223, 223);
+    margin-bottom: 40px;
+}
+
+.certificate_wrapper_nobroder{
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    width: 90%;
+    height: 184px;
+    margin-left: 20px;
+    border-radius: 4px;
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.16%, rgba(0, 0, 0, 0.17) 61.41%), linear-gradient(0deg, #DFDFDF, #DFDFDF);
+    // border: 1px solid rgb(223, 223, 223);
+    margin-bottom: 40px;
+}
+.award_certificate_url{
+    width: 100%;
+    height: 75%;
+
+}
+
+.image_bellow_wrapper{
+    width: 100%;
+    height: 25%;
+    background: #FFFFFF;
+    position: absolute;
+    border-top: 1px solid rgb(223, 223, 223);
+    /* margin-top: 135px; */
+    left: 0px;
+    top: 135px;
+}
+
+.iconImg{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.inline_image{
+    display: flex;
+}
+
+.file_name{
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 50%;
+    font-family: "Avenir Next Regular";
+font-size: 14px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 12px;
+}
+.fileExt{
+    font-family: "Avenir Next Regular";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 12px;
+}

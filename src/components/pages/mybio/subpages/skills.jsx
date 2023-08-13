@@ -3,17 +3,19 @@ import styles from '../scss/skills.module.scss'
 import { getSkills } from '../../../../constants/mainApiService'
 
 export const Skills = () => {
-    const [SkillData, setSkillData] = useState({ skillList: [], hobbieList: [], subjectList: [] })
+    const [SkillData, setSkillData] = useState({ skillList: [], hobbieList: [], subjectList: [],isSkillLoading:true })
 
     useEffect(() => {
-        getSkills().then((response) => {
+        if(SkillData.isSkillLoading){
+            getSkills().then((response) => {
          
-            setSkillData({ ...SkillData, skillList: response.result[0].skills, hobbieList: response.result[0].hobbies, subjectList: response.result[0].subjects })
-        })
+                setSkillData({ ...SkillData, skillList: response.result[0].skills, hobbieList: response.result[0].hobbies, subjectList: response.result[0].subjects,isSkillLoading:false })
+            })
+        }
+      
 
     }, [])
 
-console.log(SkillData)
     return (
         <div className={styles.main_wrapper}>
             <p className={styles.skill_text}> Skills </p>

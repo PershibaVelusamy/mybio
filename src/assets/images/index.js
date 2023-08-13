@@ -7,6 +7,9 @@ import searchRed from './search_red.svg'
 import search from './search.svg'
 import searchEmpty from './search_empty.svg'
 import closeIcon from './closeIcon.svg'
+import pdfIcon from './pdficon.svg'
+import imgicon from './imageicon.svg'
+import nopreview from './no_preview_available.png'
 export {
     leftarrow,
     resumeImg,
@@ -16,5 +19,8 @@ export {
     searchRed,
     search,
     searchEmpty,
-    closeIcon
+    closeIcon,
+    pdfIcon,
+    imgicon,
+    nopreview
 }

@@ -3,17 +3,22 @@ import { getBioDetails } from '../../../../constants/mainApiService'
 import styles from '../scss/BioPage.module.scss'
 import { resumeImg,rightarrow } from '../../../../assets/images/index'
 
-export const Biopage = () => {
+export const Biopage = (props) => {
   const [BioData, setbioData] = useState({
-    aboutMe: {}
+    aboutMe: {},isBioLoading:true
   })
+  const {openCloseResume}=props
   useEffect(() => {
-    getBioDetails().then((response) => {
-      let BloodType = response?.result[0]?.bloodGroup?.includes('+') ? 'Positive' : "Negative"
-      response.result[0]["BloodType"] = BloodType
-      setbioData({ ...BioData, aboutMe: response.result[0] })
-    })
+    if(BioData.isBioLoading){
+      getBioDetails().then((response) => {
+        let BloodType = response?.result[0]?.bloodGroup?.includes('+') ? 'Positive' : "Negative"
+        response.result[0]["BloodType"] = BloodType
+        setbioData({ ...BioData, aboutMe: response.result[0],isBioLoading:false })
+      })
+    }
+  
   }, [])
+  console.log(BioData.aboutMe,"BioData")
   return (
     <div className={styles.mybio_wrapper}>
       {/* <div className={styles.aboutme_wrapper}> */}
@@ -28,7 +33,7 @@ export const Biopage = () => {
           <span className={styles.blood}>{`${BioData?.aboutMe?.bloodGroup} (${BioData?.aboutMe?.BloodType})`} </span>
         </div>
         <div className={styles.resume_wrapper}>
-          <div className={styles.resume}>
+          <div className={styles.resume} onClick={()=>openCloseResume(BioData.aboutMe.resumeURL,1)}>
             <img className={styles.resume_img} src={resumeImg} alt="resumeImg" />
             <span className={styles.resume_txt}> Resume </span>
             <img className={styles.right_arrow} src={rightarrow} alt="rightarroe"/>
