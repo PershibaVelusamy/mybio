@@ -1,0 +1,29 @@
+.resume_wrapper {
+}
+.resume_img {
+    margin-top: 70px;
+    width: 90%;
+    height: 480px;
+    margin-left: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(223, 223, 223, 1);
+    margin-bottom: 40px;
+}
+
+.iframe {
+    margin-top: 70px;
+    width: 90%;
+    height: 480px;
+    margin-left: 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(223, 223, 223, 1);
+    margin-bottom: 40px;
+    background: rgba(223, 223, 223, 1);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.iframe::-webkit-scrollbar {
+    display: none;
+  }

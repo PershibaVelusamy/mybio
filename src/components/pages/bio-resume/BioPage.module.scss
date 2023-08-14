@@ -1,9 +1,10 @@
-@import "../../../../styles/fonts.scss";
+@import "../../../styles/fonts.scss";;
 
 .mybio_wrapper {
     background: rgba(255, 255, 255, 1);
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
     width: 100%;
+    min-height: 300px;
     // padding: 6px 9px 6px 0px;
 }
 .aboutme_wrapper {

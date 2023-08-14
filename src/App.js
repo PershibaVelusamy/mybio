@@ -1,10 +1,16 @@
 import './App.css';
-import {MyBio} from './components/pages/mybio/index'
-
+import { MyBioMain } from './components/pages/mybio/MyBioMain'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-    <MyBio/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MyBioMain />} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

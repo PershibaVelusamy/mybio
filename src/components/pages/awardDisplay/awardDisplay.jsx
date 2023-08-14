@@ -1,19 +1,19 @@
 import React from 'react'
-import styles from '../scss/awardDisplay.module.scss'
+import styles from './awardDisplay.module.scss'
 import {
     pdfIcon,
     imgicon
-} from '../../../../assets/images/index'
+} from '../../../assets/images/index'
 export const AwardDisplay = (props) => {
-    const { data ,openCloseResume} = props;
+    const { data, openCloseResume } = props;
     console.log(data, "data")
-    let fileName=data?.awardDetails?.awardCertificateURL!==""? data?.awardDetails?.awardCertificateURL.substring(data?.awardDetails?.awardCertificateURL.lastIndexOf('/')+1):"";
-let split = fileName.split('.');
-split.pop();
-let finalName = split.join("."); 
-console.log(finalName,"finalName")
-let extension = fileName.split('.').pop();   
-return (
+    let fileName = data?.awardDetails?.awardCertificateURL !== "" ? data?.awardDetails?.awardCertificateURL.substring(data?.awardDetails?.awardCertificateURL.lastIndexOf('/') + 1) : "";
+    let split = fileName.split('.');
+    split.pop();
+    let finalName = split.join(".");
+    console.log(finalName, "finalName")
+    let extension = fileName.split('.').pop();
+    return (
         <div className={styles.award_Wrapper}>
             <div className={styles.awardTitle}>{data.awardDetails.awardTitle}</div>
             <img className={styles.award_img_icon} src={data?.awardDetails?.awardIconURL} alt='award' />
@@ -26,10 +26,10 @@ return (
             </div>
 
 
-            <div className={data?.awardDetails?.awardCertificateURL !== "" ? styles.certificate_wrapper : styles.certificate_wrapper_nobroder} onClick={()=>openCloseResume(data?.awardDetails?.pdfPreview ?? data?.awardDetails?.awardIconURL,3)}  >
+            <div className={data?.awardDetails?.awardCertificateURL !== "" ? styles.certificate_wrapper : styles.certificate_wrapper_nobroder} onClick={() => openCloseResume(data?.awardDetails?.pdfPreview ?? "", 3, data?.awardDetails?.awardContentType)}  >
                 {data?.awardDetails?.awardCertificateURL !== "" &&
                     <>
-                        <img className={styles.award_certificate_url} src={data?.awardDetails?.awardContentType === "image" ?data?.awardDetails?.awardCertificateURL:data?.awardDetails?.awardIconURL} alt="" />
+                        <img className={styles.award_certificate_url} src={data?.awardDetails?.awardContentType === "image" ? data?.awardDetails?.awardCertificateURL : data?.awardDetails?.awardIconURL} alt="" />
                         <div className={styles.image_bellow_wrapper}>
                             <span className={styles.inline_image}>
 

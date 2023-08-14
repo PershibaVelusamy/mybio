@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import styles from '../scss/education.module.scss'
-import { getEducation } from '../../../../constants/mainApiService'
+import styles from './education.module.scss'
+import { getEducation } from '../../../constants/mainApiService'
 import {Education} from './education'
 import {Company} from './company'
+import { Spinner } from '../../shared/index'
 export const EducationandCompany = () => {
     const [educationData, seteducationData] = useState({ educationList: [], companyList: [],isEducationLoading:true })
 
@@ -44,8 +45,11 @@ export const EducationandCompany = () => {
 
         // </div>
         <>
-        <Education educationList={educationList}/>
-        <Company companyList={companyList}/>
+       
+        <Education educationList={educationList} isloading={educationData.isEducationLoading }/>
+        <Company companyList={companyList} isloading={educationData.isEducationLoading }/>
+       
         </>
+    
     )
 }

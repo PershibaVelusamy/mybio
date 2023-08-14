@@ -1,9 +1,10 @@
-@import "../../../../styles/fonts.scss";
+@import "../../../styles/fonts.scss";;
 
 
 .main_wrapper{
     background: rgba(255, 255, 255, 1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    min-height: 150px;
 }
 
 .award_text{
@@ -43,4 +44,8 @@ height: 74px;
 
 left: 13px;
 
+}
+
+.margin_spinner{
+    margin-top: 50px;
 }

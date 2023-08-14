@@ -79,3 +79,20 @@ export const getEducation = async () => {
 
 }
 
+export const paginationAward=async(start,offset)=>{
+   let url = `/noSessionPreviewAwards?userCode=${useCode}&start=${start}&offset=${offset}`
+    try {
+        return postApi(url, {})
+            .then((response) => {
+                console.log(response, "response")
+                if(response.status===200){
+                    return response.data
+                }
+           
+            }).catch((error) => {
+                return error
+            })
+    } catch (error) {
+        return error
+    }
+}
