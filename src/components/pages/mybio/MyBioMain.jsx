@@ -12,8 +12,6 @@ export const MyBioMain = () => {
     const hideSearch = (award) => { setbioWrapData({ ...bioWrapData, awardDetails: award, showSearch: false, openSingle: true }) }
     const closeSingle = () => { setbioWrapData({ ...bioWrapData, awardDetails: {}, showSearch: true, openSingle: false }) }
     const openCloseResume = (resume, isResume, resumeType) => {
-        // console.log(resume)
-        // let resumeFile =  getResumeDetail(resume, resumeType)
         setbioWrapData({ ...bioWrapData, isViewAll: isResume, resumeData: getResumeDetail(resume, resumeType) })
     }
     const startStopPagination = () => {setbioWrapData({ ...bioWrapData, ispaginate: !bioWrapData.ispaginate }) }

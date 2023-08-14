@@ -1,5 +1,5 @@
 import React from 'react'
-import { Biopage, Skills, Awards, EducationandCompany, Awardsandcertificate, AwardDisplay, Resume } from '../index'
+import { Biopage, Skills, Awards, EducationandCompany } from '../index'
 import { Header } from '../../shared/index'
 export const AboutMe = (props) => {
     const { bioWrapData, closeView, closeSingle, openCloseResume, searchAward, openViewAll } = props;

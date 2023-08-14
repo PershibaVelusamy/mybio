@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './awards.module.scss'
-import { getAwards, paginationAward } from '../../../constants/mainApiService'
 import { Spinner } from '../../shared/index'
 export const Awards = (props) => {
     const { bioWrapData, openViewAll } = props

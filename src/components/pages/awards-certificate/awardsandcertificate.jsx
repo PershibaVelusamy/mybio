@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './awardsandcertificate.module.scss';
 import { verified, searchEmpty } from '../../../assets/images/index';
 import { Empty, BottomSpinner } from '../../shared/index';

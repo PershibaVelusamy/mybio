@@ -1,5 +1,5 @@
 import { postApi } from './apiService'
-import { useCode,useCode1 } from './constants'
+import { useCode } from './constants'
 
 export const getBioDetails = async () => {
     try {
