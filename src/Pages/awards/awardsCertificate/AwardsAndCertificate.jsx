@@ -14,19 +14,17 @@ export const Awardsandcertificate = (props) => {
     console.log(SearchAwardList.length, "number of list")
     const onScroll = (e) => {
 
-        let bottom = e.target.scrollHeight - Math.round(e.target.scrollTop) === e.target.clientHeight + 1;
-        console.log(bottom, "bottom")
-        console.log(e.target.clientHeight, "e.target.clientHeight")
-        console.log(e.target.scrollHeight - Math.round(e.target.scrollTop), "e.target.scrollHeight - Math.round(e.target.scrollTop)")
+        let bottom = e.target.scrollHeight - Math.round(e.target.scrollTop) === e.target.clientHeight+1 ||  e.target.scrollHeight - Math.round(e.target.scrollTop) === e.target.clientHeight;
+      
         if (bottom) {
-         
-            console.log(bottom, "bottom")
           
             if (!isEnd && !ispaginate) {
                 startStopPagination()
+             
                 setTimeout(() => {
 
                     getAwardList()
+                   
                 }, 2000)
 
             } 
@@ -41,7 +39,7 @@ export const Awardsandcertificate = (props) => {
         <>
     
             {SearchAwardList.length !== 0 ?
-                <div>
+     
                 <div onScroll={onScroll}
                     className={styles.awardandcertificate_wrapper}>
                     {SearchAwardList.map((award) => {
@@ -73,7 +71,7 @@ export const Awardsandcertificate = (props) => {
 
                     </div>
 
-                </div> : <Empty emptyImg={searchEmpty} />}
+               : <Empty emptyImg={searchEmpty} />}
 
         </>
 

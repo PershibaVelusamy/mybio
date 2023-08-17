@@ -4,13 +4,15 @@
     background: rgba(255, 255, 255, 1);
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 100vh;
+  //  height: auto;
+    max-height: 100vh;
     // max-height: 100vh;
-    // min-height: 100vh;
+    min-height: 100vh;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: hidden;
+    
     // padding: 6px 9px 6px 0px;
 }
 .awardandcertificate_wrapper::-webkit-scrollbar {
@@ -22,13 +24,16 @@
 
     border-top: 0.5px solid rgba(0, 0, 0, 0.16);
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 18px;
     margin-left: 15px;
     padding-left: 4px;
     margin-right: 15px;
     cursor: pointer;
 }
-
+.skill_wrapper:nth-last-child(-n + 1) {
+    padding-bottom: 20px;
+ 
+}
 
 .awardsList:first-child {
     margin-left: 4px;

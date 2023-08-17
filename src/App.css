@@ -1,7 +1,7 @@
 html,body{
   width: 375px;
   margin: auto;
-
+  overflow-x: hidden;
 }
 
 .App {
@@ -26,6 +26,7 @@ overflow-x: hidden;
   body {
     width: 100%;
     margin: auto;
+    overflow-x: hidden;
   }
 
 }

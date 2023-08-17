@@ -55,7 +55,16 @@
     width: 90%;
 }
 .yetToAdd {
-    margin-left: 25%;
+    // margin-left: 25%;
+    text-align: center;
+    font-family: "Avenir Next Bold";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    word-break: break-all;
+    width: 90%;
+    text-align: center;
 }
 .something_went_wrong{
     margin-left: 25%;
@@ -63,7 +72,7 @@
     margin-top: 10%;
 }
 .resume_wrapper {
-    padding: 24px 13px 24px 12px;
+    padding: 24px 12px 24px 13px;
 }
 .resume {
     width: 100%;
@@ -116,3 +125,13 @@
 //     -webkit-line-clamp: 4;
 //     overflow: hidden;
 //   }
+.empty{
+  
+    font-family: "Avenir Next bold" !important;
+    color: rgba(28, 9, 9, 0.6) !important;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    margin-right: 20px;
+}

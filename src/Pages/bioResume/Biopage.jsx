@@ -5,17 +5,17 @@ import { resumeImg, rightarrow } from '../../assets/images/index'
 import { Spinner } from '../../shared/index'
 export const Biopage = (props) => {
   const [BioData, setbioData] = useState({
-    aboutMe: {}, isBioLoading: true,isError:false
+    aboutMe: {}, isBioLoading: true, isError: false
   })
   const { openCloseResume } = props
   useEffect(() => {
     getBioDetails().then((response) => {
       if (response === 'Something Went Wrong.') {
-        setbioData({ ...BioData, aboutMe: {}, isBioLoading: false,isError:true })
+        setbioData({ ...BioData, aboutMe: {}, isBioLoading: false, isError: true })
 
       } else {
         response.result[0]["BloodType"] = response?.result[0]?.bloodGroup?.includes('+') ? 'Positive' : "Negative"
-        setbioData({ ...BioData, aboutMe: response.result[0], isBioLoading: false,isError:false })
+        setbioData({ ...BioData, aboutMe: response.result[0], isBioLoading: false, isError: false })
       }
 
     })
@@ -31,29 +31,31 @@ export const Biopage = (props) => {
             <p className={styles.about_me}> About me </p>
             <Spinner />
           </> :
-          BioData.isError  ?
+          BioData.isError ?
             <>
               <p className={styles.about_me}> About me </p>
               <div className={styles.something_went_wrong}>
                 Something went Wrong!
               </div>
-             
-            </>:
+
+            </> :
             <>
               <p className={styles.about_me}> About me </p>
 
               <div className={styles.bio_para}>
                 {
                   BioData?.aboutMe?.aboutUser !== "" ? <span>{BioData?.aboutMe?.aboutUser}</span> : <span className={styles.yetToAdd}>
-                    No about me added yet
+                    <p> No about me added yet</p>
+
                   </span>}
               </div>
 
               <div >
                 <div className={styles.blood_group}>
                   <span>  Blood group</span>
-                  <span className={styles.blood}>{`${BioData?.aboutMe?.bloodGroup} (${BioData?.aboutMe?.BloodType})`} </span>
-                </div>
+                  {BioData?.aboutMe?.bloodGroup !== "" ? <span className={styles.blood}>{`${BioData?.aboutMe?.bloodGroup} (${BioData?.aboutMe?.BloodType})`} </span> :
+                    <span className={styles.empty}><p>--</p></span>
+                  }                </div>
                 <div className={styles.resume_wrapper}>
                   <div className={styles.resume} onClick={() => openCloseResume(BioData.aboutMe.resumeURL, 1, BioData.aboutMe.resumeContentType)}>
                     <img className={styles.resume_img} src={resumeImg} alt="resumeImg" />
