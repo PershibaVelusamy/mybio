@@ -5,17 +5,17 @@ import { resumeImg, rightarrow } from '../../assets/images/index'
 import { Spinner } from '../../shared/index'
 export const Biopage = (props) => {
   const [BioData, setbioData] = useState({
-    aboutMe: {}, isBioLoading: true
+    aboutMe: {}, isBioLoading: true,isError:false
   })
   const { openCloseResume } = props
   useEffect(() => {
     getBioDetails().then((response) => {
       if (response === 'Something Went Wrong.') {
-        setbioData({ ...BioData, aboutMe: "", isBioLoading: false })
+        setbioData({ ...BioData, aboutMe: {}, isBioLoading: false,isError:true })
 
       } else {
         response.result[0]["BloodType"] = response?.result[0]?.bloodGroup?.includes('+') ? 'Positive' : "Negative"
-        setbioData({ ...BioData, aboutMe: response.result[0], isBioLoading: false })
+        setbioData({ ...BioData, aboutMe: response.result[0], isBioLoading: false,isError:false })
       }
 
     })
@@ -31,16 +31,14 @@ export const Biopage = (props) => {
             <p className={styles.about_me}> About me </p>
             <Spinner />
           </> :
-          BioData.aboutMe === "" ?
+          BioData.isError  ?
             <>
               <p className={styles.about_me}> About me </p>
               <span className={styles.yetToAdd}>
                 Something went Wrong!
               </span>
              
-            </>
-
-            :
+            </>:
             <>
               <p className={styles.about_me}> About me </p>
 
