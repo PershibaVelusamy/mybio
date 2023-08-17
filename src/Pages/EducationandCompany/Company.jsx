@@ -2,13 +2,13 @@ import React from 'react'
 import styles from './education.module.scss'
 import { sheild, verified } from '../../assets/images/index'
 import { Spinner } from '../../shared/index'
-export const Company = (props) => {
-    const { companyList, isLoading } = props
+export const Company = ({ companyList, isLoading ,isError}) => {
     return (
         <div className={styles.main_wrapper}>
             <p className={styles.education_text}> Company details </p>
 
-            {isLoading ? <Spinner /> : <>
+            {isLoading ? <Spinner /> :
+            isError?<div className={styles.something_went_wrong}>Something went wrong!</div>: <>
                 <div className={styles.education_wrapper}>
 
                     {companyList.length>0?

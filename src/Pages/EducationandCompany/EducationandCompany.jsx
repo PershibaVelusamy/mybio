@@ -4,12 +4,19 @@ import {Education} from './Education'
 import {Company} from './Company'
 
 export const EducationandCompany = () => {
-    const [educationData, seteducationData] = useState({ educationList: [], companyList: [],isEducationLoading:true })
+    const [educationData, seteducationData] = useState({ educationList: [], companyList: [],
+        isEducationLoading:true,isError:false })
 
     useEffect(() => {
         if(educationData.isEducationLoading){
             getEducation().then((response) => {
-                seteducationData({ ...educationData, educationList: response.result[0].educationDetails, companyList: response.result[0].companyDetails,isEducationLoading:false })
+                if(response==="Something Went Wrong."){
+                    seteducationData({ ...educationData, isEducationLoading:false ,isError:true})
+
+                }else{
+                    seteducationData({ ...educationData, educationList: response.result[0].educationDetails, companyList: response.result[0].companyDetails,isEducationLoading:false ,isError:false})
+
+                }
             })
         }
      
@@ -21,8 +28,8 @@ export const EducationandCompany = () => {
       
         <>
        
-        <Education educationList={educationList} isloading={educationData.isEducationLoading }/>
-        <Company companyList={companyList} isloading={educationData.isEducationLoading }/>
+        <Education educationList={educationList} isloading={educationData.isEducationLoading } isError={educationData.isError}/>
+        <Company companyList={companyList} isloading={educationData.isEducationLoading }  isError={educationData.isError}/>
        
         </>
     

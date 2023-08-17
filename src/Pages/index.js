@@ -1,5 +1,5 @@
 
-import { Biopage } from './bio-resume/Biopage'
+import { Biopage } from './bioResume/Biopage'
 import { Skills } from './Skill/skills'
 import { EducationandCompany } from './EducationandCompany/EducationandCompany'
 import { Awardsandcertificate } from './awards/awardsCertificate/AwardsAndCertificate'

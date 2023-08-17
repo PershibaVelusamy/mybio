@@ -34,9 +34,9 @@ export const Biopage = (props) => {
           BioData.isError  ?
             <>
               <p className={styles.about_me}> About me </p>
-              <span className={styles.yetToAdd}>
+              <div className={styles.something_went_wrong}>
                 Something went Wrong!
-              </span>
+              </div>
              
             </>:
             <>

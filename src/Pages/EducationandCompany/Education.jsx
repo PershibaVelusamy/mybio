@@ -3,12 +3,13 @@ import styles from './education.module.scss'
 import { sheild, verified } from '../../assets/images/index'
 import { Spinner } from '../../shared/index'
 
-export const Education = (props) => {
-    const { educationList, isLoading } = props
+export const Education = ({ educationList, isLoading ,isError} ) => {
+  
     return (
         <div className={styles.main_wrapper}>
             <p className={styles.education_text}> Education details </p>
             {isLoading ? <Spinner /> :
+            isError?<div className={styles.something_went_wrong}>Something went wrong!</div>:
                 <div className={styles.education_wrapper}>
 
                     {educationList.length>0?
