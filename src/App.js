@@ -1,5 +1,5 @@
 import './App.css';
-import { MyBioMain } from './components/pages/mybio/MyBioMain'
+import { MyBioMain } from './Pages/mybio/MyBioMain'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {

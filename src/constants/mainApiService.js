@@ -1,5 +1,5 @@
 import { postApi } from './apiService'
-import { useCode } from './constants'
+import { useCode,useCode1,useCode2 } from './constants'
 
 export const getBioDetails = async () => {
     try {
@@ -42,7 +42,7 @@ export const getSkills = async () => {
 
 export const getAwards = async () => {
     try {
-        return postApi(`/noSessionPreviewAwards?userCode=${useCode}`, {})
+        return postApi(`/noSessionPreviewAwards?userCode=63a5932c6af986350ae42328`, {})
             .then((response) => {
                 console.log(response, "response")
                 if(response.status===200){
@@ -80,6 +80,7 @@ export const getEducation = async () => {
 }
 
 export const paginationAward=async(start,offset)=>{
+    console.log(start,offset,"11111111111111111111111111111111111111")
    let url = `/noSessionPreviewAwards?userCode=${useCode}&start=${start}&offset=${offset}`
     try {
         return postApi(url, {})

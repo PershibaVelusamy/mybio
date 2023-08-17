@@ -9,7 +9,6 @@ html,body{
 height: auto;
 min-height: 100vh;
 border: 1px solid rgba(223, 223, 223, 1);
-
 overflow-y: scroll;
 -ms-overflow-style: none;
 scrollbar-width: none;
