@@ -4,8 +4,9 @@
     background: rgba(255, 255, 255, 1);
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-height: 100vh;
-    min-height: 100vh;
+    height: 100vh;
+    // max-height: 100vh;
+    // min-height: 100vh;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -19,20 +20,18 @@
 .awardsList {
     display: flex;
 
-    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.16);
     padding-top: 15px;
     padding-bottom: 15px;
     margin-left: 15px;
+    padding-left: 4px;
     margin-right: 15px;
     cursor: pointer;
 }
-.awardsList:nth-last-child(-n + 1) {
-    // border-bottom: none;
-  //  margin-bottom: 10px;
-}
+
 
 .awardsList:first-child {
-    margin-left: 0px;
+    margin-left: 4px;
     border-top: 0.5px solid rgba(0, 0, 0, 0.2);
     width: 100%;
     margin-top: 10px;
@@ -47,6 +46,7 @@
 .awarditle_Wrapper {
     margin-top: 0px;
     width: 80%;
+    position: relative;
 }
 .awardTitle {
     position: relative;
@@ -60,10 +60,26 @@
     font-weight: 500;
 }
 .issuedByWrapper {
-
     width: 100%;
     margin-top: 0px;
     display: flex;
+
+    margin-left: 14px;
+    margin-top: 2px;
+    white-space: nowrap;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Avenir Next Regular";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: rgba(132, 132, 132, 1);
+    color: rgba(132, 132, 132, 1);
+    position: absolute;
+    top: 23px;
 }
 .issuedBy {
     
@@ -79,7 +95,7 @@
     line-height: 14px;
     letter-spacing: 0px;
     text-align: left;
-    color: rgba(132, 132, 132, 1);
+ 
 }
 
 .verified_img {
@@ -87,3 +103,7 @@
 }
 
 
+.spinnertop{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}

@@ -44,7 +44,7 @@
 }
 
 .iconImg{
-    margin-left: 15px;
+    margin-left: 20px;
     // margin-top: 15px;
 }
 .inline_image{
@@ -87,11 +87,15 @@
     /* margin-top: 17px; */
     height: 20px;
     width: 20px;
-    left: 100%;
+    right: 0;
+    /* margin-left: 42px; */
+    left: 113%;
     /* bottom: 1%; */
     border-radius: 6px;
     padding: 1px;
     background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
 }
 
 .closeIcon_empty{
@@ -104,6 +108,7 @@
     border-radius: 6px;
     padding: 1px;
     background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .flex_display{

@@ -42,12 +42,16 @@ export const MyBioMain = () => {
     const getAwardList = () => {
         paginationAward(bioWrapData.start, bioWrapData.offset).then((data) => {
 
-            if (data.length !== 0) {
-                setbioWrapData({
-                    ...bioWrapData, offset: 10 + bioWrapData.offset, awardsandcertificate: data.result,
-                    backupAwards: data.result, SearchAwardList: data.result, isAwardsLoading: false,
-                    ispaginate: false, isEnd: data.result.length === 0 ? true : false
-                })
+
+            if (data !== "Something went wrong.") {
+                if (data.length !== 0) {
+                    setbioWrapData({
+                        ...bioWrapData, offset: 10 + bioWrapData.offset, awardsandcertificate: data.result,
+                        backupAwards: data.result, SearchAwardList: data.result, isAwardsLoading: false,
+                        ispaginate: false, isEnd: data.result.length === 0 ? true : false
+                    })
+                }
+
             }
 
         })
