@@ -17,11 +17,14 @@ export const SkillSub = ( { SkillData, displayText ,emptyText} ) => {
                             </>)
 
                         }):
-                        <div className={styles.emptyalignement}>{emptyText} </div>
+                        <div className={styles.emptyalignement}>
+                           <p>{emptyText}</p> 
+                             </div>
                         }
 
                     </div>
                 </div>
+                <hr className={styles.horizontalLine}></hr>
             </div>
         </>
     )

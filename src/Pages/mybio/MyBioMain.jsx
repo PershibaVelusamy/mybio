@@ -44,13 +44,13 @@ export const MyBioMain = () => {
 
 
             if (data !== "Something went wrong.") {
-                if (data.length !== 0) {
+                
                     setbioWrapData({
-                        ...bioWrapData, offset: 10 + bioWrapData.offset, awardsandcertificate: data.result,
+                        ...bioWrapData, offset: 5+ bioWrapData.offset, awardsandcertificate: data.result,
                         backupAwards: data.result, SearchAwardList: data.result, isAwardsLoading: false,
-                        ispaginate: false, isEnd: data.result.length === 0 ? true : false
+                        ispaginate: false, isEnd: data.result.length === bioWrapData.SearchAwardList.length ? true : false
                     })
-                }
+                
 
             }
 
