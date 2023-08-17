@@ -6,18 +6,21 @@ export const Awards = (props) => {
     const { openViewAll } = props
     const [awardsandcertificate, setawardsandcertificate] = useState([])
     const [isLoading, setisLoading] = useState(true)
+    const [isError,setError] =  useState(false)
+   
     useEffect(() => { getAwardList(); }, [])
-
     const getAwardList = () => {
         paginationAward(1, 10).then((data) => {
-            if (data.length !== 0) {
-                setawardsandcertificate(data.result)
-                setisLoading(!isLoading)
-            }
-
-        })
-    }
-
+            if(data==="Something Went Wrong."){
+                setError(true)
+                setisLoading(false)
+            }else{
+                if (data.length !== 0) {
+                    setawardsandcertificate(data.result)
+                    setisLoading(!isLoading)
+                    setError(false)
+                }
+            }  })    }
 
     return (
         <div className={styles.main_wrapper}>
@@ -30,9 +33,10 @@ export const Awards = (props) => {
                 <div className={styles.margin_spinner}>
                     <Spinner />
                 </div>
-                :
+                :isError?
+                <div className={styles.something_went_wrong}>Something went wrong!</div>:
                 <>
-                  {awardsandcertificate.length>0?  <div className={styles.award_wrapper}>
+                  {awardsandcertificate?.length>0?  <div className={styles.award_wrapper}>
                         {awardsandcertificate?.map((awards, index) => {
                             return <>
                                 <img className={styles.award_img} key={index} src={awards?.awardIconURL} alt={awards?.awardTitle} />

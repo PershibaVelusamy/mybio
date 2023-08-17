@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './skills.module.scss'
-export const SkillSub = (props) => {
-    const { SkillData, displayText ,emptyText} = props;
+export const SkillSub = ( { SkillData, displayText ,emptyText} ) => {
+   
     return (
         <>
             <div className={styles.skill_wrapper}>
