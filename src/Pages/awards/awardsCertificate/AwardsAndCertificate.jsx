@@ -52,10 +52,10 @@ export const Awardsandcertificate = (props) => {
                                             {award.awardTitle}
                                         </span>
                                         <div className={styles.issuedByWrapper} >
-                                            <span className={styles.issuedBy}>
+                                           
                                                 {`Issued by : ${award.issuedBy}`}
-                                            </span>
-                                            {award?.issuedOrgVerifiedStatus && <img className={styles.verified_img} src={verified} alt="verifier" />}
+                                           
+                                            {!award?.issuedOrgVerifiedStatus && <img className={styles.verified_img} src={verified} alt="verifier" />}
                                         </div>
                                     </div>
                                 </div>

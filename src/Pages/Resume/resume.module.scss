@@ -1,13 +1,20 @@
 .resume_wrapper {
 }
 .resume_img {
-    margin-top: 70px;
-    width: 90%;
-    height: 480px;
-    margin-left: 20px;
+    margin-top: 180px;
+    // width: 90%;
+    // height: 480px;
+    // margin-left: 20px;
     border-radius: 4px;
-    border: 0.5px solid rgba(223, 223, 223, 0.2);
+    // border: 0.5px solid rgba(223, 223, 223, 0.2);
     margin-bottom: 40px;
+    width: 90%;
+    height: 259px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(223, 223, 223, 1)
 }
 
 .iframe {
@@ -19,14 +26,13 @@
     border: 0.5px solid rgba(223, 223, 223, 0.2);
     margin-bottom: 40px;
     // background: rgba(223, 223, 223, 1);
-//     overflow: auto;
+    //     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-overflow-x: hidden;
-overflow-y: auto; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .iframe::-webkit-scrollbar {
     display: none;
-    
-  }
+}

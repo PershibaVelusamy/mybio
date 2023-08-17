@@ -11,9 +11,11 @@
 .left_arrow {
     width: 6px;
     height: 12px;
-    margin-left: 29px;
+    margin-left: 24px;
+    cursor: pointer;
 }
 .mybio_text {
+    width: 80%;
     font-family: 'Work sans';
     font-size: 16px;
     font-weight: 500;
@@ -75,7 +77,7 @@ input:focus {
     margin-top: 17px;
     height: 20px;
     width: 20px;
-
+    cursor: pointer;
 }
 
 .searchicon{
