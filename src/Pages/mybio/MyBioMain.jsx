@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import {  getResumeDetail, Search } from './constant'
+import { getResumeDetail, Search } from './constant'
 import { paginationAward } from '../../constants/mainApiService'
-import{MainWrapper} from './MainWrapper';
+import { MainWrapper } from './MainWrapper';
 
 export const MyBioMain = () => {
     const [bioWrapData, setbioWrapData] = useState({
@@ -57,11 +57,11 @@ export const MyBioMain = () => {
     }
     return (
         <>
-          
-<MainWrapper bioWrapData={bioWrapData} closeView={closeView} closeSingle={closeSingle} 
-openCloseResume={openCloseResume} searchAward={searchAward} openViewAll={openViewAll}
-startStopPagination={startStopPagination}  hideSearch={hideSearch} getAwardList={getAwardList}
- />
+
+            <MainWrapper bioWrapData={bioWrapData} closeView={closeView} closeSingle={closeSingle}
+                openCloseResume={openCloseResume} searchAward={searchAward} openViewAll={openViewAll}
+                startStopPagination={startStopPagination} hideSearch={hideSearch} getAwardList={getAwardList}
+            />
 
         </>)
 }
